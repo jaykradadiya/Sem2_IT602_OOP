@@ -1,26 +1,56 @@
 package assignment1;
 
-class Calander{
+import java.util.Scanner;
+
+class Calendar {
+    // crating a private variable
     private int year;
-    Calander(int year){
-        this.year= year;
+
+    // initialize from constructor to private variable
+    Calendar(int year) {
+        this.year = year;
     }
-    public boolean isLeapYear(){
-        if((year%4==0 && year%100!=0 )|| (year%100==0 && year%400==0)){
+
+    // function to check year is leap year or not
+    public boolean isLeapYear() {
+        if (year % 4 == 0 && year % 100 != 0) {
+            // return true for year id leap year
+            return true;
+        } else if (year % 100 == 0 && year % 400 == 0) {
+            // return true for year id leap year
             return true;
         }
+        //return false for year is not leap year
         return false;
     }
 }
 
 public class Q2 {
     public static void main(String[] args) {
-        Calander c1 = new Calander(2008);
-        Calander c2 = new Calander(1900);
-        Calander c3 = new Calander(2000);
+        Scanner sc = new Scanner(System.in);
+        int n;
+        // loop to continue to check multiple years.
+        do {
+            System.out.println("[ 1 ] check year is leap year or not");
+            System.out.println("[ 2 ] exit");
+            System.out.print("[   ] enter your choice");
+            n = sc.nextInt();
+            switch (n) {
+                case 1:
+                    // creating and checking year is leap year or not
+                    System.out.print("Enter any year");
+                    n = sc.nextInt();
+                    if ((new Calendar(n).isLeapYear()))
+                        System.out.println("The year " + n + " is leap year ");
+                    else
+                        System.out.println("the year " + n + " is not leap year");
+                    break;
+                case 2:
+                    return;
+                default:
+                    System.out.println("Enter valid option");
+            }
+        } while (true);
 
-        System.out.println(c1.isLeapYear());
-        System.out.println(c2.isLeapYear());
-        System.out.println(c3.isLeapYear());
     }
 }

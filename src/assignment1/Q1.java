@@ -1,8 +1,11 @@
 package assignment1;
 
-class vehicles{
-    private int noOfSeats,noOfWheels;
+//creating a class
+class vehicles {
+    //creating private variables
+    private int noOfSeats, noOfWheels;
 
+    //getter of both variable from we can get value to private variable
     public int getNoOfSeats() {
         return noOfSeats;
     }
@@ -11,6 +14,7 @@ class vehicles{
         return noOfWheels;
     }
 
+    //setter of both variable from we can set value to private variable
     public void setNoOfSeats(int noOfSeats) {
         this.noOfSeats = noOfSeats;
     }
@@ -23,18 +27,19 @@ class vehicles{
 public class Q1 {
     public static void main(String[] args) {
 
-        vehicles Motercycle = new vehicles();
+        //creating object of class
+        vehicles Motorcycle = new vehicles();
         vehicles Car = new vehicles();
 
-        Motercycle.setNoOfSeats(2);
-        Motercycle.setNoOfWheels(2);
+        //assign value of variable to objects
+        Motorcycle.setNoOfSeats(2);
+        Motorcycle.setNoOfWheels(2);
 
         Car.setNoOfSeats(5);
         Car.setNoOfWheels(4);
 
-        System.out.println("MoterCycle has "+Motercycle.getNoOfWheels()+" wheels and "+Motercycle.getNoOfSeats()+" seats");
-        System.out.println("Car has "+Car.getNoOfWheels()+" wheels and "+Car.getNoOfSeats()+" seats");
-
-
+        //display and getting value of variable from object
+        System.out.println("MotorCycle has " + Motorcycle.getNoOfWheels() + " wheels and " + Motorcycle.getNoOfSeats() + " seats");
+        System.out.println("Car has " + Car.getNoOfWheels() + " wheels and " + Car.getNoOfSeats() + " seats");
     }
 }
