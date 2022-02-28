@@ -42,16 +42,16 @@ class ToogleRoom {
         return count;
     }
 
-    public int wihtoutSimpulation() {
-        int count = 0;
-        //this is Mahtematical approach
-        for (int i = 1; i * i <= capacity; i++) {
-            System.out.print(i*i+" ");
-            count++;
-        }
-        System.out.println();
-        return count++;
-    }
+//    public int wihtoutSimpulation() {
+//        int count = 0;
+//        //this is Mahtematical approach
+//        for (int i = 1; i * i <= capacity; i++) {
+//            System.out.print(i*i+" ");
+//            count++;
+//        }
+//        System.out.println();
+//        return count++;
+//    }
 
 }
 
@@ -59,6 +59,6 @@ public class Q4 {
     public static void main(String[] args) {
         ToogleRoom tg = new ToogleRoom(100);
         System.out.println("ans after simulation "+tg.getTotalOpenRoomsAfterSimulation()+" Doors are open");
-        System.out.println("ans from mathematical "+tg.wihtoutSimpulation());
+//        System.out.println("ans from mathematical "+tg.wihtoutSimpulation());
     }
 }
