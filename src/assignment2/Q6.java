@@ -3,7 +3,6 @@ package assignment2;
 
 class magic{
     String str;
-
     public String getStr() {
         return str;
     }
