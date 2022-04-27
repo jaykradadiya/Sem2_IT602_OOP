@@ -1,0 +1,7 @@
+The number of words in the file 10000
+The average number of letters per word 9
+The average number of letters per word 6
+The longest word and its length  documentcreatetextnode
+The shortest word and its length a
+The first word in the file a
+The last word in the file zus
